@@ -5,7 +5,7 @@
 //  Created by Lazy on 2021/7/14.
 //
 
-enum FoodCategory: String {
+enum FoodCategory: String, CaseIterable {
     case biryani = "biryani"
     case burger = "burger"
     case butterChicken = "butter-chicken"

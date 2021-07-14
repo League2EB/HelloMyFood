@@ -5,36 +5,46 @@
 //  Created by Lazy on 2021/7/14.
 //
 
-class ViewController: UIViewController {
+class ViewController: HMFBaseUIViewController {
+
+    @IBOutlet var views: MainViews!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        onBackgroundThreadSync {
-            for _ in 1...10 {
-                fetchFoodData(type: .biryani)
-            }
-        }
+        views.randomBtn.addTarget(self, action: #selector(randomBtnPressed), for: .touchUpInside)
+        views.generateBtn.addTarget(self, action: #selector(generateBtnPressed), for: .touchUpInside)
+        
     }
 
-    /// 獲取食物資料
-    /// - Parameter type: 食物類型
-    private func fetchFoodData(type: FoodCategory) {
-        if let url = URL(string: "\(HMFnvironmentManager.shared.BASE_URL)\(type.rawValue)") {
-            URLSession.shared.dataTask(with: url) { (data, response, error) in
-                if let error = error {
-                    print("錯誤: \(error.localizedDescription)")
-                } else if let _ = response as? HTTPURLResponse, let data = data {
-                    let decoder = JSONDecoder()
+    @objc
+    private func randomBtnPressed() {
+        views.countTextField.text = "\(Int.random(in: 1..<21))"
+    }
 
-                    if let fooddata = try? decoder.decode(FoodData.self, from: data) {
-                        DispatchQueue.main.async {
-                            //TODO: - UI刷新
-                        }
-                        NSLog("\(fooddata.image)")
-                    }
-                }
-            }.resume()
+    @objc
+    private func generateBtnPressed() {
+        if let string = views.countTextField.text, let value = Int(string) {
+            guard value != 0 && value <= 21 else { return }
+            let vc = UIStoryboard.loadHMFProfileViewController()
+            vc.count = value
+            vc.delegate = self
+            navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+}
+
+extension ViewController: UITextFieldDelegate {
+
+}
+
+extension ViewController: HMFAPInfoDelegate {
+
+    func didFetchAPIResponse(dataString: String) {
+        DispatchQueue.main.async { [weak self] in
+            guard let `self` = self else { return }
+            self.views.consolLogView.text = dataString
+            //TOOD: UI尚未100%相同，待解決
         }
     }
 }
