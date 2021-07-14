@@ -64,10 +64,8 @@
 			isa = PBXGroup;
 			children = (
 				63748DA5269F278000DCDC37 /* Manager */,
-				63748F2B269F424400DCDC37 /* Util */,
 				63748F28269F41B100DCDC37 /* Extension */,
 				63748D99269F1C7D00DCDC37 /* Model */,
-				63748D9A269F1C8500DCDC37 /* View */,
 				63748D9B269F1C8A00DCDC37 /* Controller */,
 				63748D9E269F1CD700DCDC37 /* Storyboard */,
 				63748D9D269F1CA600DCDC37 /* SupportFile */,
@@ -81,13 +79,6 @@
 				63748DA3269F264800DCDC37 /* HMFModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		63748D9A269F1C8500DCDC37 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		63748D9B269F1C8A00DCDC37 /* Controller */ = {
@@ -133,13 +124,6 @@
 				63748F2C269F429900DCDC37 /* HMFUIButton.swift */,
 			);
 			path = Extension;
-			sourceTree = "<group>";
-		};
-		63748F2B269F424400DCDC37 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
