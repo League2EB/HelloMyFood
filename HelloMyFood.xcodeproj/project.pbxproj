@@ -1,0 +1,436 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		63748D86269F1C0F00DCDC37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748D85269F1C0F00DCDC37 /* AppDelegate.swift */; };
+		63748D8A269F1C0F00DCDC37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748D89269F1C0F00DCDC37 /* ViewController.swift */; };
+		63748D8D269F1C0F00DCDC37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63748D8B269F1C0F00DCDC37 /* Main.storyboard */; };
+		63748D8F269F1C1100DCDC37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63748D8E269F1C1100DCDC37 /* Assets.xcassets */; };
+		63748D92269F1C1100DCDC37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63748D90269F1C1100DCDC37 /* LaunchScreen.storyboard */; };
+		63748DA4269F264800DCDC37 /* HMFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748DA3269F264800DCDC37 /* HMFModel.swift */; };
+		63748DA7269F27AB00DCDC37 /* HMFnvironmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748DA6269F27AB00DCDC37 /* HMFnvironmentManager.swift */; };
+		63748F2A269F41BF00DCDC37 /* ThreadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F29269F41BF00DCDC37 /* ThreadExtension.swift */; };
+		63748F2D269F429900DCDC37 /* HMFUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F2C269F429900DCDC37 /* HMFUIButton.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		63748D82269F1C0F00DCDC37 /* HelloMyFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMyFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		63748D85269F1C0F00DCDC37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		63748D89269F1C0F00DCDC37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63748D8C269F1C0F00DCDC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		63748D8E269F1C1100DCDC37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		63748D91269F1C1100DCDC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		63748D93269F1C1100DCDC37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		63748D9F269F1D1800DCDC37 /* HelloMyFood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloMyFood-Bridging-Header.h"; sourceTree = "<group>"; };
+		63748DA3269F264800DCDC37 /* HMFModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFModel.swift; sourceTree = "<group>"; };
+		63748DA6269F27AB00DCDC37 /* HMFnvironmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFnvironmentManager.swift; sourceTree = "<group>"; };
+		63748F29269F41BF00DCDC37 /* ThreadExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadExtension.swift; sourceTree = "<group>"; };
+		63748F2C269F429900DCDC37 /* HMFUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFUIButton.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		63748D7F269F1C0F00DCDC37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		63748D79269F1C0F00DCDC37 = {
+			isa = PBXGroup;
+			children = (
+				63748D84269F1C0F00DCDC37 /* HelloMyFood */,
+				63748D83269F1C0F00DCDC37 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		63748D83269F1C0F00DCDC37 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				63748D82269F1C0F00DCDC37 /* HelloMyFood.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		63748D84269F1C0F00DCDC37 /* HelloMyFood */ = {
+			isa = PBXGroup;
+			children = (
+				63748DA5269F278000DCDC37 /* Manager */,
+				63748F2B269F424400DCDC37 /* Util */,
+				63748F28269F41B100DCDC37 /* Extension */,
+				63748D99269F1C7D00DCDC37 /* Model */,
+				63748D9A269F1C8500DCDC37 /* View */,
+				63748D9B269F1C8A00DCDC37 /* Controller */,
+				63748D9E269F1CD700DCDC37 /* Storyboard */,
+				63748D9D269F1CA600DCDC37 /* SupportFile */,
+			);
+			path = HelloMyFood;
+			sourceTree = "<group>";
+		};
+		63748D99269F1C7D00DCDC37 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				63748DA3269F264800DCDC37 /* HMFModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		63748D9A269F1C8500DCDC37 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		63748D9B269F1C8A00DCDC37 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				63748D89269F1C0F00DCDC37 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		63748D9D269F1CA600DCDC37 /* SupportFile */ = {
+			isa = PBXGroup;
+			children = (
+				63748D8E269F1C1100DCDC37 /* Assets.xcassets */,
+				63748D85269F1C0F00DCDC37 /* AppDelegate.swift */,
+				63748D93269F1C1100DCDC37 /* Info.plist */,
+				63748D9F269F1D1800DCDC37 /* HelloMyFood-Bridging-Header.h */,
+			);
+			path = SupportFile;
+			sourceTree = "<group>";
+		};
+		63748D9E269F1CD700DCDC37 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				63748D8B269F1C0F00DCDC37 /* Main.storyboard */,
+				63748D90269F1C1100DCDC37 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		63748DA5269F278000DCDC37 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				63748DA6269F27AB00DCDC37 /* HMFnvironmentManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		63748F28269F41B100DCDC37 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				63748F29269F41BF00DCDC37 /* ThreadExtension.swift */,
+				63748F2C269F429900DCDC37 /* HMFUIButton.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		63748F2B269F424400DCDC37 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		63748D81269F1C0F00DCDC37 /* HelloMyFood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 63748D96269F1C1100DCDC37 /* Build configuration list for PBXNativeTarget "HelloMyFood" */;
+			buildPhases = (
+				63748D7E269F1C0F00DCDC37 /* Sources */,
+				63748D7F269F1C0F00DCDC37 /* Frameworks */,
+				63748D80269F1C0F00DCDC37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HelloMyFood;
+			productName = HelloMyFood;
+			productReference = 63748D82269F1C0F00DCDC37 /* HelloMyFood.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		63748D7A269F1C0F00DCDC37 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					63748D81269F1C0F00DCDC37 = {
+						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
+					};
+				};
+			};
+			buildConfigurationList = 63748D7D269F1C0F00DCDC37 /* Build configuration list for PBXProject "HelloMyFood" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 63748D79269F1C0F00DCDC37;
+			productRefGroup = 63748D83269F1C0F00DCDC37 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				63748D81269F1C0F00DCDC37 /* HelloMyFood */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		63748D80269F1C0F00DCDC37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63748D92269F1C1100DCDC37 /* LaunchScreen.storyboard in Resources */,
+				63748D8F269F1C1100DCDC37 /* Assets.xcassets in Resources */,
+				63748D8D269F1C0F00DCDC37 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		63748D7E269F1C0F00DCDC37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				63748D8A269F1C0F00DCDC37 /* ViewController.swift in Sources */,
+				63748F2D269F429900DCDC37 /* HMFUIButton.swift in Sources */,
+				63748D86269F1C0F00DCDC37 /* AppDelegate.swift in Sources */,
+				63748F2A269F41BF00DCDC37 /* ThreadExtension.swift in Sources */,
+				63748DA4269F264800DCDC37 /* HMFModel.swift in Sources */,
+				63748DA7269F27AB00DCDC37 /* HMFnvironmentManager.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		63748D8B269F1C0F00DCDC37 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63748D8C269F1C0F00DCDC37 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		63748D90269F1C1100DCDC37 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				63748D91269F1C1100DCDC37 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		63748D94269F1C1100DCDC37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		63748D95269F1C1100DCDC37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		63748D97269F1C1100DCDC37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HelloMyFood/SupportFile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hellomyfood.league2eb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloMyFood/SupportFile/HelloMyFood-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		63748D98269F1C1100DCDC37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = HelloMyFood/SupportFile/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hellomyfood.league2eb;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "HelloMyFood/SupportFile/HelloMyFood-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		63748D7D269F1C0F00DCDC37 /* Build configuration list for PBXProject "HelloMyFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63748D94269F1C1100DCDC37 /* Debug */,
+				63748D95269F1C1100DCDC37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		63748D96269F1C1100DCDC37 /* Build configuration list for PBXNativeTarget "HelloMyFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				63748D97269F1C1100DCDC37 /* Debug */,
+				63748D98269F1C1100DCDC37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 63748D7A269F1C0F00DCDC37 /* Project object */;
+}
