@@ -1,11 +1,11 @@
 //
-//  MainViews.swift
+//  HMFMainViews.swift
 //  HelloMyFood
 //
 //  Created by Lazy on 2021/7/15.
 //
 
-class MainViews: NSObject {
+class HMFMainViews: NSObject {
 
     /// 數字輸入框
     @IBOutlet weak var countTextField: UITextField!

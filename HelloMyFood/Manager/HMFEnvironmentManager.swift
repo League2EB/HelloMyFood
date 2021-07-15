@@ -1,13 +1,13 @@
 //
-//  HMFnvironmentManager.swift
+//  HMFEnvironmentManager.swift
 //  HelloMyFood
 //
 //  Created by Lazy on 2021/7/14.
 //
 
-class HMFnvironmentManager {
+class HMFEnvironmentManager {
 
-    static let shared = HMFnvironmentManager()
+    static let shared = HMFEnvironmentManager()
 
     private init() { }
 

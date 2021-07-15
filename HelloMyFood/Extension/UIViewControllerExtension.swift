@@ -19,4 +19,21 @@ extension UIViewController {
         }
         return describing
     }
+
+    /// 新增左上角導航欄按鈕
+    /// - Parameters:
+    ///   - imageName: 圖片名稱
+    ///   - type: 行為
+    func addLeftButtonItem(image: UIImage) {
+        let popBtn = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(perviousBack))
+        popBtn.tintColor = .black
+        self.navigationItem.leftBarButtonItem = popBtn
+    }
+
+    //MARK: - Object
+    /// 返回
+    @objc
+    func perviousBack() {
+        self.navigationController?.popViewController(animated: true)
+    }
 }

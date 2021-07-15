@@ -8,43 +8,65 @@
 
 /* Begin PBXBuildFile section */
 		63748D86269F1C0F00DCDC37 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748D85269F1C0F00DCDC37 /* AppDelegate.swift */; };
-		63748D8A269F1C0F00DCDC37 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748D89269F1C0F00DCDC37 /* ViewController.swift */; };
+		63748D8A269F1C0F00DCDC37 /* HMFMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748D89269F1C0F00DCDC37 /* HMFMainViewController.swift */; };
 		63748D8D269F1C0F00DCDC37 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63748D8B269F1C0F00DCDC37 /* Main.storyboard */; };
 		63748D8F269F1C1100DCDC37 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 63748D8E269F1C1100DCDC37 /* Assets.xcassets */; };
 		63748D92269F1C1100DCDC37 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63748D90269F1C1100DCDC37 /* LaunchScreen.storyboard */; };
 		63748DA4269F264800DCDC37 /* HMFModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748DA3269F264800DCDC37 /* HMFModel.swift */; };
-		63748DA7269F27AB00DCDC37 /* HMFnvironmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748DA6269F27AB00DCDC37 /* HMFnvironmentManager.swift */; };
+		63748DA7269F27AB00DCDC37 /* HMFEnvironmentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748DA6269F27AB00DCDC37 /* HMFEnvironmentManager.swift */; };
 		63748F2A269F41BF00DCDC37 /* ThreadExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F29269F41BF00DCDC37 /* ThreadExtension.swift */; };
 		63748F2F269F4B3C00DCDC37 /* HMFRoundCornersButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F2E269F4B3C00DCDC37 /* HMFRoundCornersButton.swift */; };
-		63748F32269F585500DCDC37 /* MainViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F31269F585500DCDC37 /* MainViews.swift */; };
+		63748F32269F585500DCDC37 /* HMFMainViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F31269F585500DCDC37 /* HMFMainViews.swift */; };
 		63748F34269F62EF00DCDC37 /* HMFProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F33269F62EF00DCDC37 /* HMFProfileViewController.swift */; };
-		63748F36269F633700DCDC37 /* UIStoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F35269F633700DCDC37 /* UIStoryboardExtension.swift */; };
 		63748F38269F680C00DCDC37 /* HMFBaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F37269F680C00DCDC37 /* HMFBaseUIViewController.swift */; };
 		63748F3A269F684000DCDC37 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F39269F684000DCDC37 /* UIViewControllerExtension.swift */; };
 		63748F3C269F6DFB00DCDC37 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F3B269F6DFB00DCDC37 /* UIImageExtension.swift */; };
 		63748F3E269F715100DCDC37 /* UIColorEstension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F3D269F715100DCDC37 /* UIColorEstension.swift */; };
+		63748F40269F74C500DCDC37 /* UIImageViewExtansion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F3F269F74C500DCDC37 /* UIImageViewExtansion.swift */; };
+		63748F49269F8B2F00DCDC37 /* HMFProfileHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F47269F8B2F00DCDC37 /* HMFProfileHeaderCell.swift */; };
+		63748F4A269F8B2F00DCDC37 /* HMFProfileHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63748F48269F8B2F00DCDC37 /* HMFProfileHeaderCell.xib */; };
+		63748F4E269F8D5500DCDC37 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F4D269F8D5500DCDC37 /* UIViewExtension.swift */; };
+		63748F50269F963C00DCDC37 /* HMFPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F4F269F963C00DCDC37 /* HMFPostCell.swift */; };
+		63748F52269F96AC00DCDC37 /* HMFProfileFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F51269F96AC00DCDC37 /* HMFProfileFilterCell.swift */; };
+		63748F54269F973200DCDC37 /* HMFProfileFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748F53269F973100DCDC37 /* HMFProfileFilterView.swift */; };
+		63748FD6269F97E300DCDC37 /* HMFCalculatUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748FD5269F97E300DCDC37 /* HMFCalculatUtil.swift */; };
+		63748FDB269FE8D500DCDC37 /* UserDefaultWrapped.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748FDA269FE8D500DCDC37 /* UserDefaultWrapped.swift */; };
+		63748FDD269FEFCC00DCDC37 /* HMFRoundCornersImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748FDC269FEFCC00DCDC37 /* HMFRoundCornersImageView.swift */; };
+		63748FDF269FF2E300DCDC37 /* HMFInfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748FDE269FF2E300DCDC37 /* HMFInfoLabelView.swift */; };
+		63748FE1269FF2E900DCDC37 /* HMFInfoLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63748FE0269FF2E900DCDC37 /* HMFInfoLabelView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		63748D82269F1C0F00DCDC37 /* HelloMyFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloMyFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		63748D85269F1C0F00DCDC37 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		63748D89269F1C0F00DCDC37 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		63748D89269F1C0F00DCDC37 /* HMFMainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFMainViewController.swift; sourceTree = "<group>"; };
 		63748D8C269F1C0F00DCDC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		63748D8E269F1C1100DCDC37 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		63748D91269F1C1100DCDC37 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		63748D93269F1C1100DCDC37 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		63748D9F269F1D1800DCDC37 /* HelloMyFood-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "HelloMyFood-Bridging-Header.h"; sourceTree = "<group>"; };
 		63748DA3269F264800DCDC37 /* HMFModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFModel.swift; sourceTree = "<group>"; };
-		63748DA6269F27AB00DCDC37 /* HMFnvironmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFnvironmentManager.swift; sourceTree = "<group>"; };
+		63748DA6269F27AB00DCDC37 /* HMFEnvironmentManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFEnvironmentManager.swift; sourceTree = "<group>"; };
 		63748F29269F41BF00DCDC37 /* ThreadExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThreadExtension.swift; sourceTree = "<group>"; };
 		63748F2E269F4B3C00DCDC37 /* HMFRoundCornersButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFRoundCornersButton.swift; sourceTree = "<group>"; };
-		63748F31269F585500DCDC37 /* MainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViews.swift; sourceTree = "<group>"; };
+		63748F31269F585500DCDC37 /* HMFMainViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFMainViews.swift; sourceTree = "<group>"; };
 		63748F33269F62EF00DCDC37 /* HMFProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFProfileViewController.swift; sourceTree = "<group>"; };
-		63748F35269F633700DCDC37 /* UIStoryboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStoryboardExtension.swift; sourceTree = "<group>"; };
 		63748F37269F680C00DCDC37 /* HMFBaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFBaseUIViewController.swift; sourceTree = "<group>"; };
 		63748F39269F684000DCDC37 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		63748F3B269F6DFB00DCDC37 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 		63748F3D269F715100DCDC37 /* UIColorEstension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorEstension.swift; sourceTree = "<group>"; };
+		63748F3F269F74C500DCDC37 /* UIImageViewExtansion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewExtansion.swift; sourceTree = "<group>"; };
+		63748F47269F8B2F00DCDC37 /* HMFProfileHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFProfileHeaderCell.swift; sourceTree = "<group>"; };
+		63748F48269F8B2F00DCDC37 /* HMFProfileHeaderCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMFProfileHeaderCell.xib; sourceTree = "<group>"; };
+		63748F4D269F8D5500DCDC37 /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		63748F4F269F963C00DCDC37 /* HMFPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFPostCell.swift; sourceTree = "<group>"; };
+		63748F51269F96AC00DCDC37 /* HMFProfileFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFProfileFilterCell.swift; sourceTree = "<group>"; };
+		63748F53269F973100DCDC37 /* HMFProfileFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFProfileFilterView.swift; sourceTree = "<group>"; };
+		63748FD5269F97E300DCDC37 /* HMFCalculatUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFCalculatUtil.swift; sourceTree = "<group>"; };
+		63748FDA269FE8D500DCDC37 /* UserDefaultWrapped.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultWrapped.swift; sourceTree = "<group>"; };
+		63748FDC269FEFCC00DCDC37 /* HMFRoundCornersImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFRoundCornersImageView.swift; sourceTree = "<group>"; };
+		63748FDE269FF2E300DCDC37 /* HMFInfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFInfoLabelView.swift; sourceTree = "<group>"; };
+		63748FE0269FF2E900DCDC37 /* HMFInfoLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMFInfoLabelView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,7 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				63748F37269F680C00DCDC37 /* HMFBaseUIViewController.swift */,
-				63748D89269F1C0F00DCDC37 /* ViewController.swift */,
+				63748D89269F1C0F00DCDC37 /* HMFMainViewController.swift */,
 				63748F33269F62EF00DCDC37 /* HMFProfileViewController.swift */,
 			);
 			path = Controller;
@@ -129,7 +151,7 @@
 		63748DA5269F278000DCDC37 /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				63748DA6269F27AB00DCDC37 /* HMFnvironmentManager.swift */,
+				63748DA6269F27AB00DCDC37 /* HMFEnvironmentManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -140,9 +162,10 @@
 				63748F29269F41BF00DCDC37 /* ThreadExtension.swift */,
 				63748F3D269F715100DCDC37 /* UIColorEstension.swift */,
 				63748F3B269F6DFB00DCDC37 /* UIImageExtension.swift */,
-				63748F35269F633700DCDC37 /* UIStoryboardExtension.swift */,
+				63748F4D269F8D5500DCDC37 /* UIViewExtension.swift */,
+				63748F3F269F74C500DCDC37 /* UIImageViewExtansion.swift */,
 				63748F39269F684000DCDC37 /* UIViewControllerExtension.swift */,
-				63748F2E269F4B3C00DCDC37 /* HMFRoundCornersButton.swift */,
+				63748FD7269F97E600DCDC37 /* Util */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -150,9 +173,27 @@
 		63748F30269F582300DCDC37 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				63748F31269F585500DCDC37 /* MainViews.swift */,
+				63748F31269F585500DCDC37 /* HMFMainViews.swift */,
+				63748F4F269F963C00DCDC37 /* HMFPostCell.swift */,
+				63748F53269F973100DCDC37 /* HMFProfileFilterView.swift */,
+				63748F51269F96AC00DCDC37 /* HMFProfileFilterCell.swift */,
+				63748F47269F8B2F00DCDC37 /* HMFProfileHeaderCell.swift */,
+				63748F48269F8B2F00DCDC37 /* HMFProfileHeaderCell.xib */,
+				63748F2E269F4B3C00DCDC37 /* HMFRoundCornersButton.swift */,
+				63748FDC269FEFCC00DCDC37 /* HMFRoundCornersImageView.swift */,
+				63748FDE269FF2E300DCDC37 /* HMFInfoLabelView.swift */,
+				63748FE0269FF2E900DCDC37 /* HMFInfoLabelView.xib */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		63748FD7269F97E600DCDC37 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				63748FD5269F97E300DCDC37 /* HMFCalculatUtil.swift */,
+				63748FDA269FE8D500DCDC37 /* UserDefaultWrapped.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,7 +256,9 @@
 			files = (
 				63748D92269F1C1100DCDC37 /* LaunchScreen.storyboard in Resources */,
 				63748D8F269F1C1100DCDC37 /* Assets.xcassets in Resources */,
+				63748F4A269F8B2F00DCDC37 /* HMFProfileHeaderCell.xib in Resources */,
 				63748D8D269F1C0F00DCDC37 /* Main.storyboard in Resources */,
+				63748FE1269FF2E900DCDC37 /* HMFInfoLabelView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,18 +269,27 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				63748F32269F585500DCDC37 /* MainViews.swift in Sources */,
-				63748D8A269F1C0F00DCDC37 /* ViewController.swift in Sources */,
+				63748F32269F585500DCDC37 /* HMFMainViews.swift in Sources */,
+				63748D8A269F1C0F00DCDC37 /* HMFMainViewController.swift in Sources */,
+				63748FD6269F97E300DCDC37 /* HMFCalculatUtil.swift in Sources */,
+				63748FDD269FEFCC00DCDC37 /* HMFRoundCornersImageView.swift in Sources */,
+				63748F50269F963C00DCDC37 /* HMFPostCell.swift in Sources */,
 				63748D86269F1C0F00DCDC37 /* AppDelegate.swift in Sources */,
 				63748F2A269F41BF00DCDC37 /* ThreadExtension.swift in Sources */,
-				63748F36269F633700DCDC37 /* UIStoryboardExtension.swift in Sources */,
+				63748F4E269F8D5500DCDC37 /* UIViewExtension.swift in Sources */,
 				63748F38269F680C00DCDC37 /* HMFBaseUIViewController.swift in Sources */,
 				63748F34269F62EF00DCDC37 /* HMFProfileViewController.swift in Sources */,
+				63748F54269F973200DCDC37 /* HMFProfileFilterView.swift in Sources */,
+				63748F52269F96AC00DCDC37 /* HMFProfileFilterCell.swift in Sources */,
 				63748F2F269F4B3C00DCDC37 /* HMFRoundCornersButton.swift in Sources */,
+				63748FDF269FF2E300DCDC37 /* HMFInfoLabelView.swift in Sources */,
+				63748F40269F74C500DCDC37 /* UIImageViewExtansion.swift in Sources */,
+				63748F49269F8B2F00DCDC37 /* HMFProfileHeaderCell.swift in Sources */,
 				63748DA4269F264800DCDC37 /* HMFModel.swift in Sources */,
 				63748F3A269F684000DCDC37 /* UIViewControllerExtension.swift in Sources */,
-				63748DA7269F27AB00DCDC37 /* HMFnvironmentManager.swift in Sources */,
+				63748DA7269F27AB00DCDC37 /* HMFEnvironmentManager.swift in Sources */,
 				63748F3C269F6DFB00DCDC37 /* UIImageExtension.swift in Sources */,
+				63748FDB269FE8D500DCDC37 /* UserDefaultWrapped.swift in Sources */,
 				63748F3E269F715100DCDC37 /* UIColorEstension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -5,14 +5,13 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HelloMyFood" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HMFMainViewController" customModule="HelloMyFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -144,7 +143,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TAi-eK-G8V">
                                 <rect key="frame" x="0.0" y="258.5" width="375" height="323.5"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgx-bb-fhd">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qgx-bb-fhd">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="323.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -207,7 +206,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <customObject id="tKg-rr-uMf" customClass="MainViews" customModule="HelloMyFood" customModuleProvider="target">
+                <customObject id="tKg-rr-uMf" customClass="HMFMainViews" customModule="HelloMyFood" customModuleProvider="target">
                     <connections>
                         <outlet property="consolLogView" destination="Qgx-bb-fhd" id="p1h-YS-Ac4"/>
                         <outlet property="countTextField" destination="gP1-k5-6Sl" id="LFO-fx-ZJ0"/>
@@ -223,15 +222,16 @@
             <objects>
                 <viewController storyboardIdentifier="HMFProfileViewController" id="1v5-OY-ugQ" customClass="HMFProfileViewController" customModule="HelloMyFood" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yl4-hb-diG">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="ENT-eh-E6I"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6RA-ac-35N" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1754" y="116"/>
+            <point key="canvasLocation" x="1800.8" y="115.59220389805098"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Cto-sq-ker">
@@ -252,9 +252,12 @@
             <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
         </scene>
     </scenes>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
+    <designables>
+        <designable name="5Bv-FP-2oU">
+            <size key="intrinsicContentSize" width="34" height="31"/>
+        </designable>
+        <designable name="k9s-pA-VZc">
+            <size key="intrinsicContentSize" width="34" height="31"/>
+        </designable>
+    </designables>
 </document>
