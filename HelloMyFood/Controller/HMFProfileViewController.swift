@@ -22,7 +22,7 @@ class HMFProfileViewController: UICollectionViewController {
     /// 隨機種類
     private var randomCategory: FoodCategory = .biryani
     /// 類型
-    private var type: HMFProfileFilterOptions = .post
+    private var randomCategory: FoodCategory = FoodCategory.allCases.randomElement() ?? .biryani
     /// 圖片陣列
     private var images: [String] = []
     /// 調度群組

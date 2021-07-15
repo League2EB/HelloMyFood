@@ -36,9 +36,11 @@ class HMFMainViewController: HMFBaseUIViewController {
             if self.tickTimes >= 20 {
                 self.timer.stopTimer()
                 self.tickTimes = 0
+                self.views.countTextField.isUserInteractionEnabled = true
             }
         }
         timer.startTimer()
+        views.countTextField.isUserInteractionEnabled = false
     }
 
     @objc
