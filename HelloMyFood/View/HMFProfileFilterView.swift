@@ -25,9 +25,10 @@ class HMFProfileFilterView: UICollectionReusableView {
         return cv
     }()
 
+    @available(*, deprecated, message: "該測試不需要實作，單純覺得好看也貼近真的IG")
     private let underlineView: UIView = {
         let view = UIView()
-        view.backgroundColor = .black
+        view.backgroundColor = UIColor(0x5395ea)
         return view
     }()
 
