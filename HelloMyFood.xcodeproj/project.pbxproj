@@ -34,6 +34,7 @@
 		63748FDD269FEFCC00DCDC37 /* HMFRoundCornersImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748FDC269FEFCC00DCDC37 /* HMFRoundCornersImageView.swift */; };
 		63748FDF269FF2E300DCDC37 /* HMFInfoLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63748FDE269FF2E300DCDC37 /* HMFInfoLabelView.swift */; };
 		63748FE1269FF2E900DCDC37 /* HMFInfoLabelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 63748FE0269FF2E900DCDC37 /* HMFInfoLabelView.xib */; };
+		637490E726A00D8600DCDC37 /* HMFTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 637490E626A00D8500DCDC37 /* HMFTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +68,7 @@
 		63748FDC269FEFCC00DCDC37 /* HMFRoundCornersImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFRoundCornersImageView.swift; sourceTree = "<group>"; };
 		63748FDE269FF2E300DCDC37 /* HMFInfoLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFInfoLabelView.swift; sourceTree = "<group>"; };
 		63748FE0269FF2E900DCDC37 /* HMFInfoLabelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HMFInfoLabelView.xib; sourceTree = "<group>"; };
+		637490E626A00D8500DCDC37 /* HMFTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMFTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				63748FD5269F97E300DCDC37 /* HMFCalculatUtil.swift */,
+				637490E626A00D8500DCDC37 /* HMFTimer.swift */,
 				63748FDA269FE8D500DCDC37 /* UserDefaultWrapped.swift */,
 			);
 			path = Util;
@@ -279,6 +282,7 @@
 				63748F4E269F8D5500DCDC37 /* UIViewExtension.swift in Sources */,
 				63748F38269F680C00DCDC37 /* HMFBaseUIViewController.swift in Sources */,
 				63748F34269F62EF00DCDC37 /* HMFProfileViewController.swift in Sources */,
+				637490E726A00D8600DCDC37 /* HMFTimer.swift in Sources */,
 				63748F54269F973200DCDC37 /* HMFProfileFilterView.swift in Sources */,
 				63748F52269F96AC00DCDC37 /* HMFProfileFilterCell.swift in Sources */,
 				63748F2F269F4B3C00DCDC37 /* HMFRoundCornersButton.swift in Sources */,

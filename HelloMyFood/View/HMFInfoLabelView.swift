@@ -12,7 +12,7 @@ class HMFInfoLabelView: UIView {
     @IBOutlet var contentView: UIView!
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var describeLabel: UILabel!
-    
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()

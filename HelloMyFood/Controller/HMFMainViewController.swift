@@ -9,6 +9,10 @@ class HMFMainViewController: HMFBaseUIViewController {
 
     @IBOutlet var views: HMFMainViews!
 
+    private var timer = HMFTimer(timeInterval: 0.05, isInMainQueue: true)
+
+    private var tickTimes: Int = 0
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,7 +29,16 @@ class HMFMainViewController: HMFBaseUIViewController {
 
     @objc
     private func randomBtnPressed() {
-        views.countTextField.text = "\(Int.random(in: 1..<21))"
+        timer.trigger = { [weak self] tick in
+            guard let `self` = self else { return }
+            self.views.countTextField.text = "\(Int.random(in: 1..<21))"
+            self.tickTimes += 1
+            if self.tickTimes >= 20 {
+                self.timer.stopTimer()
+                self.tickTimes = 0
+            }
+        }
+        timer.startTimer()
     }
 
     @objc
