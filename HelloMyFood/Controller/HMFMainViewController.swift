@@ -5,45 +5,36 @@
 //  Created by Lazy on 2021/7/14.
 //
 
+import RxCocoa
+import RxGesture
+
 class HMFMainViewController: HMFBaseUIViewController {
 
     @IBOutlet var views: HMFMainViews!
 
-    private var timer = HMFTimer(timeInterval: 0.05, isInMainQueue: true)
-
-    private var tickTimes: Int = 0
+    private let viewModel: HMFMainViewModel = HMFMainViewModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        views.randomBtn.addTarget(self, action: #selector(randomBtnPressed), for: .touchUpInside)
-        views.generateBtn.addTarget(self, action: #selector(generateBtnPressed), for: .touchUpInside)
-        setupHideKeyboard()
+        views.randomBtn.rx.tap.subscribe(onNext: { [self] _ in
+            self.viewModel.timerTick()
+        }).disposed(by: bag)
+
+        views.generateBtn.rx.tap.subscribe(onNext: { [self] _ in
+            self.generateBtnPressed()
+        }).disposed(by: bag)
+
+        view.rx.tapGesture { rec, _ in
+            rec.cancelsTouchesInView = false
+        }.when(.recognized).subscribe(onNext: { [self] _ in
+            self.view.endEditing(true)
+        }).disposed(by: bag)
+
+        viewModel.randomNumber.bind(to: views.countTextField.rx.text).disposed(by: bag)
+        viewModel.userInteractionEnabled.bind(to: views.countTextField.rx.isUserInteractionEnabled).disposed(by: bag)
     }
 
-    private func setupHideKeyboard() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
-        tapGesture.cancelsTouchesInView = false
-        self.view.addGestureRecognizer(tapGesture)
-    }
-
-    @objc
-    private func randomBtnPressed() {
-        timer.trigger = { [weak self] tick in
-            guard let `self` = self else { return }
-            self.views.countTextField.text = "\(Int.random(in: 1..<21))"
-            self.tickTimes += 1
-            if self.tickTimes >= 20 {
-                self.timer.stopTimer()
-                self.tickTimes = 0
-                self.views.countTextField.isUserInteractionEnabled = true
-            }
-        }
-        timer.startTimer()
-        views.countTextField.isUserInteractionEnabled = false
-    }
-
-    @objc
     private func generateBtnPressed() {
         let value = Int(views.countTextField.text ?? "0") ?? 0
         if views.countTextField.text == "" || value <= 20 {
@@ -53,11 +44,6 @@ class HMFMainViewController: HMFBaseUIViewController {
             vc.delegate = self
             navigationController?.pushViewController(vc, animated: true)
         }
-    }
-
-    @objc
-    private func hideKeyboard() {
-        self.view.endEditing(true)
     }
 }
 

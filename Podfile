@@ -1,4 +1,4 @@
-platform :ios, '11.0'
+platform :ios, '12.0'
 install! 'cocoapods',
 disable_input_output_paths: true,
 generate_multiple_pod_projects: true,
@@ -9,9 +9,11 @@ target 'HelloMyFood' do
 
   #Design
   pod 'RxCocoa'
-  pod 'Moya'
   pod 'RxSwift'
+  pod "RxGesture"
+  pod 'RxSwiftExt'
   pod 'ObjectMapper'
+  pod 'Moya'
 
   pod 'Kingfisher', '~> 6.0'
 

@@ -5,6 +5,9 @@
 //  Created by Lazy on 2021/7/15.
 //
 
+import RxCocoa
+import RxSwift
+
 private let headerIdentifier = "filterHeader"
 private let profileIdentifier = "profileCell"
 private let identifier = "postCell"
@@ -15,20 +18,18 @@ protocol HMFAPInfoDelegate: AnyObject {
 
 class HMFProfileViewController: UICollectionViewController {
 
+    let bag: DisposeBag = DisposeBag()
+
     /// 請求總數
     var count: Int = 0
 
     weak var delegate: HMFAPInfoDelegate? = nil
-    /// 隨機種類
-    private var randomCategory: FoodCategory = FoodCategory.allCases.randomElement() ?? .biryani
+    /// 圖片陣列
+    fileprivate var images: [String] = []
     /// 類型
     private var type: HMFProfileFilterOptions = .post
-    /// 圖片陣列
-    private var images: [String] = []
-    /// 調度群組
-    private let group = DispatchGroup()
 
-    @UserDefault("Images", defaultValue: []) var dbImages: [String]
+    private let viewModel: HMFProfileViewModel = HMFProfileViewModel()
 
     deinit {
         NSLog("%@釋放", self.className())
@@ -47,29 +48,12 @@ class HMFProfileViewController: UICollectionViewController {
 
         title = "League2eb"
 
-        setupData()
+        viewModel.requestFoodData(times: count)
+        viewModel.images.bind(to: self.rx.data).disposed(by: bag)
+        viewModel.needReload.bind(to: self.rx.isReloadble).disposed(by: bag)
 
         addLeftButtonItem(image: #imageLiteral(resourceName: "icon_previous").imageResize(sizeChange: CGSize(width: 24, height: 24)))
-
         configureCollectionView()
-
-    }
-
-    private func setupData() {
-        if count == 0 {
-            images = dbImages
-            collectionView.reloadData()
-        } else {
-            for _ in 1...count {
-                group.enter()
-                fetchFoodData(type: randomCategory)
-            }
-            group.notify(queue: .main) { [self] in
-                dbImages.removeAll()
-                dbImages = self.images
-                self.collectionView.reloadData()
-            }
-        }
     }
 
     private func configureCollectionView() {
@@ -84,28 +68,6 @@ class HMFProfileViewController: UICollectionViewController {
 
         collectionView.delegate = self
         collectionView.dataSource = self
-    }
-
-    /// 獲取食物資料
-    /// - Parameter type: 食物類型
-    private func fetchFoodData(type: FoodCategory) {
-        if let url = URL(string: "\(HMFEnvironmentManager.shared.BASE_URL)\(type.rawValue)") {
-            URLSession.shared.dataTask(with: url) { [weak self] (data, response, error) in
-                guard let `self` = self else { return }
-                if let error = error {
-                    print("錯誤: \(error.localizedDescription)")
-                } else if let _ = response as? HTTPURLResponse, let data = data {
-
-                    if let response = try? JSONDecoder().decode(FoodData.self, from: data) {
-                        self.images.append(response.image)
-                        onMainThread {
-                            self.delegate?.didFetchAPIResponse(dataString: String(data: data, encoding: String.Encoding(rawValue: String.Encoding.utf8.rawValue)) ?? "")
-                        }
-                    }
-                    self.group.leave()
-                }
-            }.resume()
-        }
     }
 }
 
@@ -135,7 +97,7 @@ extension HMFProfileViewController {
                 return cell
             }
             if let _ = URL(string: images[indexPath.row]) {
-                cell.postImageView.asyncLoadImageWithURL(url: images[indexPath.row])
+                cell.asyncLoadImage(with: images[indexPath.row])
             }
             return cell
         }
@@ -199,5 +161,26 @@ extension HMFProfileViewController: UICollectionViewDelegateFlowLayout {
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+}
+
+extension Reactive where Base: HMFProfileViewController {
+
+    var data: Binder<[String]> {
+        get {
+            return Binder(self.base) { target, value in
+                target.images = value
+            }
+        }
+    }
+
+    var isReloadble: Binder<Bool> {
+        get {
+            return Binder(self.base) { target, value in
+                if value {
+                    target.collectionView.reloadData()
+                }
+            }
+        }
     }
 }

@@ -5,6 +5,8 @@
 //  Created by Lazy on 2021/7/14.
 //
 
+import ObjectMapper
+
 enum FoodCategory: String, CaseIterable {
     case biryani = "biryani"
     case burger = "burger"
@@ -18,7 +20,14 @@ enum FoodCategory: String, CaseIterable {
     case samosa = "samosa"
 }
 
-struct FoodData: Decodable {
-    var image: String
+class HMFFoodData: Mappable {
+
+    var image: String = ""
+
+    required init?(map: Map) { }
+
+    func mapping(map: Map) {
+        image <- map["image"]
+    }
 }
 

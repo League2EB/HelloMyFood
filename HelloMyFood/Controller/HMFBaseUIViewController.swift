@@ -5,8 +5,11 @@
 //  Created by Lazy on 2021/7/15.
 //
 
+import RxSwift
 
 class HMFBaseUIViewController: UIViewController {
+
+    let bag: DisposeBag = DisposeBag()
 
     override func viewDidLoad() {
         super.viewDidLoad()
